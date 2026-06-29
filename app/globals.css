@@ -1,0 +1,71 @@
+/* ---- Base reset (from the original design) ---- */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: #08080a; }
+::selection { background: #e9ebec; color: #0a0a0b; }
+a { color: inherit; text-decoration: none; }
+input, textarea, select, button { font-family: inherit; }
+textarea { resize: vertical; }
+
+/* ---- Keyframes ---- */
+@keyframes agRise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+@keyframes agFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes agShine { 0% { background-position: 0% 50%; } 100% { background-position: -200% 50%; } }
+@keyframes agMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes agBob { 0%, 100% { transform: translateY(0); opacity: .5; } 50% { transform: translateY(9px); opacity: 1; } }
+@keyframes agGrain {
+  0% { transform: translate(0, 0); } 20% { transform: translate(-3%, 2%); }
+  40% { transform: translate(2%, -3%); } 60% { transform: translate(-2%, -2%); }
+  80% { transform: translate(3%, 2%); } 100% { transform: translate(0, 0); }
+}
+
+/* ---- Hover / focus interactions (handled by the design runtime originally) ---- */
+.vp-navlink { transition: color .25s ease; }
+.vp-navlink:hover { color: #fff !important; }
+.vp-navlink-dim { transition: color .25s ease; }
+.vp-navlink-dim:hover { color: #fff !important; }
+
+.vp-chrome-btn { transition: filter .25s ease, transform .25s ease; }
+.vp-chrome-btn:hover { filter: brightness(1.07); }
+.vp-chrome-btn-hero:hover { filter: brightness(1.07); transform: translateY(-1px); }
+
+.vp-ghost-btn { transition: background .25s ease, border-color .25s ease; }
+.vp-ghost-btn:hover { background: rgba(255, 255, 255, .09) !important; border-color: rgba(255, 255, 255, .4) !important; }
+
+.vp-svc-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, .22) !important;
+  background: #15151a !important;
+}
+
+.vp-gal-img:hover { transform: scale(1.05); filter: contrast(1.1) brightness(1.02); }
+.vp-gal-img-wide:hover { transform: scale(1.04); filter: contrast(1.1) brightness(1.02); }
+
+.vp-contact-card { transition: border-color .3s ease; }
+.vp-contact-card:hover { border-color: rgba(255, 255, 255, .22) !important; }
+
+.vp-foot-link { transition: color .2s ease; }
+.vp-foot-link:hover { color: #fff !important; }
+
+.vp-input { transition: border-color .2s ease; }
+.vp-input:focus { border-color: #cfd3d6 !important; outline: none; }
+
+.vp-underline-link { transition: color .2s ease; }
+.vp-underline-link:hover { color: #fff !important; }
+
+/* ---- Responsive (collapse multi-column layouts; swap nav for burger) ---- */
+@media (max-width: 920px) {
+  .vp-ba-grid,
+  .vp-process-grid,
+  .vp-book-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 860px) {
+  .vp-navlinks { display: none !important; }
+  .vp-burger { display: flex !important; }
+  .vp-footer-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 520px) {
+  .vp-footer-grid { grid-template-columns: 1fr !important; }
+}
