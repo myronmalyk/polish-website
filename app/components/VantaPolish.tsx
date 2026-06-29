@@ -426,6 +426,7 @@ export default function VantaPolish({
 
       {/* HERO */}
       <section
+        className="vp-hero"
         style={{
           position: "relative",
           minHeight: "100vh",
@@ -456,6 +457,7 @@ export default function VantaPolish({
             }}
           >
             <div
+              className="vp-hero-eyebrow"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -472,6 +474,7 @@ export default function VantaPolish({
               Paint Correction · Ceramic Coating · Greater Seattle
             </div>
             <h1
+              className="vp-hero-h1"
               style={{
                 margin: "22px 0 0",
                 fontFamily: ARCHIVO,
@@ -512,6 +515,7 @@ export default function VantaPolish({
               A high-end detailing studio for paint correction, ceramic coating, and finishes that look better than the showroom floor. By appointment — mobile or in-studio.
             </p>
             <div
+              className="vp-hero-cta"
               style={{
                 display: "flex",
                 flexWrap: "wrap",
@@ -523,7 +527,7 @@ export default function VantaPolish({
             >
               <a
                 href="#book"
-                className="vp-chrome-btn-hero"
+                className="vp-chrome-btn-hero vp-hero-btn"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -546,7 +550,7 @@ export default function VantaPolish({
                 href={waHref}
                 target="_blank"
                 rel="noopener"
-                className="vp-ghost-btn"
+                className="vp-ghost-btn vp-hero-btn"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -567,6 +571,7 @@ export default function VantaPolish({
               </a>
             </div>
             <div
+              className="vp-hero-chips"
               style={{
                 display: "flex",
                 flexWrap: "wrap",
@@ -586,7 +591,7 @@ export default function VantaPolish({
             </div>
           </div>
         </div>
-        <div style={{ position: "absolute", bottom: 26, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 10, animation: "agBob 2.4s ease-in-out infinite" }}>
+        <div className="vp-hero-scroll" style={{ position: "absolute", bottom: 26, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 10, animation: "agBob 2.4s ease-in-out infinite" }}>
           <span style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".3em", color: "#80868c" }}>SCROLL</span>
           <span style={{ width: 1, height: 34, background: "linear-gradient(#80868c,transparent)" }} />
         </div>

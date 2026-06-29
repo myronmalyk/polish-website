@@ -69,3 +69,48 @@ textarea { resize: vertical; }
 @media (max-width: 520px) {
   .vp-footer-grid { grid-template-columns: 1fr !important; }
 }
+
+/* ---- Hero: mobile polish ---- */
+@media (max-width: 700px) {
+  .vp-hero {
+    /* tighter top gap under the fixed nav; svh avoids the mobile URL-bar jump */
+    min-height: 100svh !important;
+    padding-top: 104px !important;
+    padding-bottom: 56px !important;
+  }
+  .vp-hero-eyebrow {
+    font-size: 10.5px !important;
+    letter-spacing: .16em !important;
+    gap: 10px !important;
+    line-height: 1.5;
+  }
+  .vp-hero-h1 {
+    font-size: clamp(40px, 13vw, 60px) !important;
+    letter-spacing: -.03em !important;
+  }
+  /* Stack the CTAs and make them full-width / equal for easy tapping */
+  .vp-hero-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100%;
+    max-width: 420px;
+    gap: 12px !important;
+    margin-top: 30px !important;
+  }
+  .vp-hero-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  .vp-hero-chips {
+    margin-top: 26px !important;
+    gap: 8px 14px !important;
+  }
+  /* The scroll cue crowds the content on short screens */
+  .vp-hero-scroll { display: none !important; }
+}
+
+@media (max-width: 360px) {
+  .vp-hero-h1 { font-size: 38px !important; }
+}
